@@ -39,10 +39,25 @@ if (command == 1)
         Console.WriteLine("Invalid logIn or password.");
     }
 }
+else if (command == 2)
+{
+    Console.WriteLine("===== Sign Up ======");
+    Console.Write("Create your logIn: ");
+    string newLogIn = Console.ReadLine();
+    Console.Write("Create your password: ");
+    string newPassword = Console.ReadLine();
+
+    Array.Resize(ref logIn, logIn.Length + 1);
+    Array.Resize(ref password, password.Length + 1);
+    logIn[logIn.Length - 1] = newLogIn;
+    password[password.Length - 1] = newPassword;
+    Console.Clear();
+    Console.WriteLine("You have successfully signed up!");
+}
 
 
 
 
-goto belgi;
+    goto belgi;
 
 
